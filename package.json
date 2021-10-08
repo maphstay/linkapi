@@ -1,0 +1,25 @@
+{
+  "name": "linkapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "author": "Stefferson",
+  "scripts": {
+    "dev": "nodemon -w ./src/bin/server.js -r dotenv/config ./src/bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config ./src/bin/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsontoxml": "^1.0.1",
+    "mongoose": "^6.0.9",
+    "nodemon": "^2.0.13",
+    "qs": "^6.10.1",
+    "swagger-ui-express": "^4.1.6",
+    "yamljs": "^0.3.0"
+  }
+}

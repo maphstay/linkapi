@@ -1,0 +1,60 @@
+openapi: 3.0.1
+info:
+  title: LinkApi API Documentation
+  description: >-
+    Integration API between Bling and Pipedrive platform
+  contact:
+    name: Stefferson
+    url: "https://lnkd.in/dXRnp7M"
+    email: steffersonthallys@gmail.com
+  version: 1.0.0
+servers:
+  - url: "http://localhost:3000/"
+tags:
+  - name: Orders
+    description: Orders value listed by date
+paths:
+  /alldays:
+    get:
+      tags:
+        - Orders
+      summary: Show orders total values listed by date
+      description: Returns a list of totals by date
+      operationId: ordersValueByDate
+      responses:
+        200:
+          description: Sucessfull operation
+  /orders:
+    post:
+      tags:
+        - Orders
+      summary: Create a order
+      operationId: createOrder
+      requestBody:
+        description: Creates a order in Bling and sums on total value by date on database
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Order"
+        required: true
+      responses:
+        200:
+          description: Sucessfull operation
+        201:
+          description: Created with success
+        400:
+          description: Order with the same hash can't registered
+          content: {}
+      x-codegen-request-body-name: body
+components:
+  schemas:
+    Order:
+      required:
+        - dataBase
+        - valorTotal
+      type: object
+      properties:
+        dataBase:
+          type: string
+        valorTotal:
+          type: number
