@@ -17,6 +17,8 @@ Para usar o repositório, siga os passos:
 
 > Endpoint documentação swagger para teste: <http://localhost:3000/api-docs>
 
+> OBS: acessar src/services/createOrder.js, alterar a data na linha 37 para testar a gravação da soma dos pedidos em variadas datas
+
 
 ## :ledger: Descrição
 
