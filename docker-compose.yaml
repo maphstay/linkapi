@@ -1,7 +1,0 @@
-version: "1"
-
-services:
-  api:
-    image: sthallys/linkapi:v1
-    ports:
-      - "3000:3000"
