@@ -1,4 +1,4 @@
-import Deal from "../models/Order.js";
+import Deal from "../../src/models/order.js";
 import { saveOrder } from "../repositories/orderRepository.js";
 import { create } from "../services/createOrder.js";
 import ListWonDealsController from "./ListWonDealsController.js";

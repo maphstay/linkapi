@@ -1,4 +1,4 @@
-import Deal from "../models/Order.js";
+import Deal from "../../src/models/order.js";
 
 export async function saveOrder(orders) {
   const savedOrders = await orders.map(async ({ dataBase, valorTotal }) => {
