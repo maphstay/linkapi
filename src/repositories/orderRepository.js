@@ -10,7 +10,7 @@ export async function saveOrder(orders) {
   });
 }
 export async function allDays() {
-  const orders = await Deal.find();
+  const orders = await Deal.find().sort("dataBase");
 
   return orders;
 }
