@@ -4,39 +4,32 @@
 
 ## :checkered_flag: Tecnologias
 
+- Docker 4.1
 - NodeJS 14.18
 - MongoDB (ATLAS)
 - Swagger OAS3
 
 Para usar o repositório, siga os passos:
-<<<<<<< HEAD
 > git clone https://github.com/maphstay/linkapi.git
-=======
-> clonar repositório: "git clone https://github.com/maphstay/linkapi.git"
->>>>>>> c1e3b79549c24fa0034f6cc06d06a57ec3fec2b5
 
-> entrar na pasta: "cd .\linkapi\"
+> cd .\linkapi\
 
-> instalar as dependências: "yarn"
-
-> iniciar o servidor: "yarn dev"
+> docker compose up -d
 
 > Documentação swagger para teste: <http://localhost:3000/api-docs>
 
-<<<<<<< HEAD
 > OBS: Pode ser testado pelo Postman/Insomnia através das rotas:
     > Listar: GET <http://localhost:3000/alldays>
     > Cadastrar: POST <http://localhost:3000/orders>
-=======
-> OBS: acessar src/services/createOrder.js, alterar a data na linha 37 para testar a gravação da soma dos pedidos em variadas datas
->>>>>>> c1e3b79549c24fa0034f6cc06d06a57ec3fec2b5
 
 
 ## :ledger: Descrição
 
-1 - Criada uma API utilizando nodeJS e javascript a qual integra a plataforma Pipedrive com a Bling para cadastro de pedido que por sua vez a soma total dos valores de todos os pedidos filtrados pela data de emissão são armazenados no banco mongoDB.
+1 - Todo o projeto esta conteinerizado utilizando docker.
 
-2 - Seguindo o modelo MVC, utilizado o desacoplamento de código e boas práticas.
+2 - Criada uma API utilizando nodeJS e javascript a qual integra a plataforma Pipedrive com a Bling para cadastro de pedido que por sua vez a soma total dos valores de todos os pedidos filtrados pela data de emissão são armazenados no banco mongoDB.
+
+3 - Seguindo o modelo MVC, utilizado o desacoplamento de código e boas práticas.
 
 
 ## :bust_in_silhouette: Autor
