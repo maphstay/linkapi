@@ -10,14 +10,17 @@
 - Swagger OAS3
 
 Para usar o repositório, siga os passos:
-> git clone <https://github.com/maphstay/linkapi.git>
+> git clone https://github.com/maphstay/linkapi.git
 
 > cd .\linkapi\
 
 > docker compose up -d
 
-> Endpoint documentação swagger para teste: <http://localhost:3000/api-docs>
+> Documentação swagger para teste: <http://localhost:3000/api-docs>
 
+> OBS: Pode ser testado pelo Postman/Insomnia através das rotas:
+    > Listar: GET <http://localhost:3000/alldays>
+    > Cadastrar: POST <http://localhost:3000/orders>
 
 
 ## :ledger: Descrição

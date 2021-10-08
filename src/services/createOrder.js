@@ -6,6 +6,16 @@ export async function create(deals) {
   const numero = function (min, max) {
     return Math.random() * (max - min) + min;
   };
+  const randomDate = function (start, end) {
+    const date = new Date(
+      start.getTime() + Math.random() * (end.getTime() - start.getTime())
+    );
+    if (date.getDate() < 10)
+      return `0${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+
+    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+  };
+
   const orders = deals.map(async (deal) => {
     const xml = jsontoxml(
       {
@@ -34,7 +44,10 @@ export async function create(deals) {
           },
           {
             name: "data",
-            text: "05/10/2021",
+            text: `${randomDate(
+              new Date(2021, 10, 5),
+              new Date(2021, 10, 15)
+            )}`,
           },
           {
             name: "transporte",
