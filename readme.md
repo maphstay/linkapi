@@ -9,13 +9,13 @@
 - Swagger OAS3
 
 Para usar o repositório, siga os passos:
-> git clone <https://github.com/maphstay/linkapi.git>
+> clonar repositório: "git clone https://github.com/maphstay/linkapi.git"
 
-> cd .\linkapi\
+> entrar na pasta: "cd .\linkapi\"
 
-> yarn 
+> instalar as dependências: "yarn"
 
-> yarn dev
+> iniciar o servidor: "yarn dev"
 
 > Endpoint documentação swagger para teste: <http://localhost:3000/api-docs>
 
