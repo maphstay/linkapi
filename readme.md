@@ -13,6 +13,8 @@ Para usar o repositório, siga os passos:
 
 > cd .\linkapi\
 
+> yarn 
+
 > yarn dev
 
 > Endpoint documentação swagger para teste: <http://localhost:3000/api-docs>
