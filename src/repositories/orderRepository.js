@@ -1,4 +1,4 @@
-import deal from "../models/profitOfDay.js";
+import deal from "../infra/models/profitOfDay.js";
 
 export async function createProfitOfDay(orders) {
   await orders.map(async ({ dataBase, valorTotal }) => {

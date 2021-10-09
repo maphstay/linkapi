@@ -1,4 +1,4 @@
-import deal from "../models/profitOfDay.js";
+import deal from "../infra/models/profitOfDay.js";
 import { createProfitOfDay } from "../repositories/orderRepository.js";
 import { create } from "../services/createOrder.js";
 import listWonDealsController from "./listWonDealsController.js";
