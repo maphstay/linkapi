@@ -1,7 +1,7 @@
 import Deal from "../../src/models/order.js";
 
-export async function saveOrder(orders) {
-  const savedOrders = await orders.map(async ({ dataBase, valorTotal }) => {
+export async function createProfitOfDay(orders) {
+  await orders.map(async ({ dataBase, valorTotal }) => {
     const order = await Deal.create({
       dataBase,
       valorTotal,

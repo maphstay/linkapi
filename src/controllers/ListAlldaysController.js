@@ -1,5 +1,4 @@
 import { allDays } from "../repositories/orderRepository.js";
-
 class ListAllDaysController {
   async index(req, res) {
     try {
