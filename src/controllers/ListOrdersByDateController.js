@@ -1,5 +1,5 @@
 import axios from "axios";
-class ListOrdersByDateController {
+class listOrdersByDateController {
   async index(dataBase, _req, res) {
     try {
       const response = await axios.get(
@@ -18,4 +18,4 @@ class ListOrdersByDateController {
   }
 }
 
-export default new ListOrdersByDateController();
+export default new listOrdersByDateController();

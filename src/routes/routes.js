@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import ListAllDaysController from "../controllers/ListAlldaysController.js";
-import CreateOrderController from "../controllers/CreateOrderController.js";
+import listAllDaysController from "../controllers/listAlldaysController.js";
+import createOrderController from "../controllers/createOrderController.js";
 
 const router = express.Router();
 
@@ -9,7 +9,7 @@ router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 router.use(cors());
 
-router.get("/alldays", ListAllDaysController.index);
-router.post("/orders", CreateOrderController.create);
+router.get("/alldays", listAllDaysController.index);
+router.post("/orders", createOrderController.create);
 
 export { router };

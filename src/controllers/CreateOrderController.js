@@ -1,19 +1,19 @@
-import Deal from "../../src/models/order.js";
+import deal from "../models/profitOfDay.js";
 import { createProfitOfDay } from "../repositories/orderRepository.js";
 import { create } from "../services/createOrder.js";
-import ListWonDealsController from "./ListWonDealsController.js";
-import UpdateProfitOfSearchedDay from "./UpdateProfitOfSearchedDayController.js";
+import listWonDealsController from "./listWonDealsController.js";
+import updateProfitOfSearchedDay from "./updateProfitOfSearchedDayController.js";
 
-class CreateOrderController {
+class createOrderController {
   async create(_req, res) {
     try {
-      const response = await ListWonDealsController.getWonDeals();
+      const wonDeals = await listWonDealsController.getWonDeals();
 
-      const order = await create(response);
+      const order = await create(wonDeals);
 
       if (order[0].erro) return res.status(400).json(order);
 
-      const profitOfSearchedDay = await Deal.findOne({
+      const profitOfSearchedDay = await deal.findOne({
         dataBase: order[0].dataBase,
       });
 
@@ -23,7 +23,7 @@ class CreateOrderController {
 
         return res.status(201).json(order);
       } else {
-        return res.status(200).json(await UpdateProfitOfSearchedDay());
+        return res.status(200).json(await updateProfitOfSearchedDay());
       }
     } catch (error) {
       return res.status(400).json({ message: error });
@@ -31,4 +31,4 @@ class CreateOrderController {
   }
 }
 
-export default new CreateOrderController();
+export default new createOrderController();

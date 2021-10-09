@@ -1,8 +1,8 @@
-import Deal from "../../src/models/order.js";
+import deal from "../models/profitOfDay.js";
 
 export async function createProfitOfDay(orders) {
   await orders.map(async ({ dataBase, valorTotal }) => {
-    const order = await Deal.create({
+    const order = await deal.create({
       dataBase,
       valorTotal,
     });
@@ -10,7 +10,7 @@ export async function createProfitOfDay(orders) {
   });
 }
 export async function allDays() {
-  const orders = await Deal.find().sort("dataBase");
+  const orders = await deal.find().sort("dataBase");
 
   return orders;
 }

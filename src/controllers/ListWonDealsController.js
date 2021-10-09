@@ -1,6 +1,6 @@
 import axios from "axios";
 
-class ListWonDealsController {
+class listWonDealsController {
   async getWonDeals() {
     try {
       const response = await axios.get(
@@ -15,4 +15,4 @@ class ListWonDealsController {
   }
 }
 
-export default new ListWonDealsController();
+export default new listWonDealsController();

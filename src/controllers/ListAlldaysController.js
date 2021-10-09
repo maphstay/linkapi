@@ -1,6 +1,6 @@
 import { allDays } from "../repositories/orderRepository.js";
-class ListAllDaysController {
-  async index(req, res) {
+class listAllDaysController {
+  async index(_req, res) {
     try {
       const orders = await allDays();
       return res.status(200).json(orders);
@@ -10,4 +10,4 @@ class ListAllDaysController {
   }
 }
 
-export default new ListAllDaysController();
+export default new listAllDaysController();
