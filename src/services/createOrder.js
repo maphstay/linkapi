@@ -2,7 +2,7 @@ import axios from "axios";
 import qs from "qs";
 import getXml from "./getXml.js";
 
-export async function create(deals) {
+export async function createDeal(deals) {
   const orders = deals.map(async (deal) => {
     const xml = getXml(deal);
 
