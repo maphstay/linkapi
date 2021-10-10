@@ -3,10 +3,10 @@ import axios from "axios";
 class listWonDealsController {
   async getWonDeals() {
     try {
-      const response = await axios.get(
+      const wonDeal = await axios.get(
         `${process.env.PIPEDRIVE_URL_API}/deals?&status=won&start=0&api_token=${process.env.PIPEDRIVE_API_TOKEN}`
       );
-      const { data } = response.data;
+      const { data } = wonDeal.data;
 
       return data;
     } catch (error) {

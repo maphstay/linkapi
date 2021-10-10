@@ -1,16 +1,16 @@
-import deal from "../infra/models/profitOfDay.js";
+import profitOfDay from "../../src/infra/models/profitOfDay.js";
 
 export async function createProfitOfDay(orders) {
   await orders.map(async ({ dataBase, valorTotal }) => {
-    const order = await deal.create({
+    const order = await profitOfDay.create({
       dataBase,
       valorTotal,
     });
     return order;
   });
 }
-export async function allDays() {
-  const orders = await deal.find().sort("dataBase");
+export async function listProfitAllDays() {
+  const orders = await profitOfDay.find().sort("dataBase");
 
   return orders;
 }
